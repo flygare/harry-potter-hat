@@ -1,2 +1,2 @@
 # harry-potter-hat
-Machine learning harry potter hat
+Harry potter hat that is sorting using deep learning
