@@ -1,0 +1,11 @@
+{
+  "sys": {
+    "type": "Error",
+    "id": "ParameterNotAllowed",
+    "details": {
+      "parameters": [
+        "w%5Cu003d1200"
+      ]
+    }
+  }
+}
