@@ -92,6 +92,7 @@ plt.show()"""
 model = keras.Sequential([
     keras.layers.Flatten(input_shape=(128, 128)),
     keras.layers.Dense(128, activation='relu'),
+    keras.layers.Dense(64, activation='sigmoid'),
     keras.layers.Dense(4, activation='softmax')
 ])
 model.compile(optimizer='adam',
@@ -99,7 +100,7 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 
 # Train the model
-model.fit(train_images, train_image_labels, epochs=10)
+model.fit(train_images, train_image_labels, epochs=50)
 
 # Evaluate accuracy
 test_loss, test_acc = model.evaluate(
@@ -109,6 +110,7 @@ print('\nTest accuracy:', test_acc)
 # Predict
 class_names = ['Gryffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin']
 predictions = model.predict(validation_images)
-print("Prediction: ", class_names[np.argmax(predictions[0])])
-print("Actual: ",
-      class_names[validation_image_labels[np.argmax(predictions[0])]])
+for prediction in predictions:
+    print("Prediction: ", class_names[np.argmax(prediction)])
+    print("Actual: ",
+          class_names[validation_image_labels[np.argmax(prediction)]])
