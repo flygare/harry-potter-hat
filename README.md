@@ -1,4 +1,4 @@
-# harry-potter-hat
+# harry-potter-magician of the leader
 
 Harry potter sorting hat that is sorting using deep learning in TensorFlow on pictures
 
